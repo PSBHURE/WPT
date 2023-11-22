@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+    <div style="border: 2px;
+    border-style:solid;
+    border-color: black;
+    width: 80%;">
+    <h1 align="left">Appointment Scheduler</h1>
+        <fieldset style="width: 90%;">
+            <legend>Personal information</legend>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" value="name" required/><br>
+
+            <label for="telephone no">Telephone number</label><br>
+            <input type="text" id="telephone no" value="telephone no" required><br>
+
+            <label for="email">E-mail address</label><br>
+            <input type="email" id="email" value="email" required><br>
+
+            <label for="dob">Date of birth</label><br>
+            <input type="date" id="dob" value="date" required><br>
+            </fieldset>
+        <fieldset style="width: 90%;">
+            <legend>Appointment Request</legend>
+            <label for="reason">What is the reason for your visit?</label><br>
+            <input type="text" id="reason" value="What is the reason for your visit?"><br>
+
+            <label for="pain level">Current pain level</label><br>
+            <input type="range" id="pain level" ><br>
+
+
+            <label for="date">Preferred date</label><br>
+            <input type="date" id="date" value="date"><br>
+
+            <label for="time">Preferred time</label><br>
+            <input type="number" min="1" max="12" >
+            <input type="number" min="1" max="59">
+ 
+            <select id="slot" name="slot" size="1"/>
+             <option value="slot">AM</option> 
+             <option value="slot">PM</option>  
+            </select>
+        </fieldset>
+        <button type="submit" id="submit butten" value="submit">Submit</button>
+        <button type="reset" id="cancel butten" value="cancel">cancel</button>
+</div>
+</form>
+</body>
+</html>
