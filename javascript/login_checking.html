@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+    <script>
+        function checkUserName()
+        {
+            let name=document.getElementById("uname").value;
+            if(name.trim().length>=3)
+            {
+                
+                document.getElementById("euname").innerHTML="";
+                return true;
+            }
+            document.getElementById("euname").innerHTML="name should contain more than 3 character,name can not be space!!!"
+            return false;
+        }
+
+        function checkPassword()
+        {
+            let pass=document.getElementById("pass").value;
+            if(pass.trim().length>=3)
+            {
+                document.getElementById("epass").innerHTML="";
+                return true;
+            }
+            document.getElementById("epass").innerHTML="all password must not be space,password should contain more than three character!!! "
+            return false;
+        }
+       function checkConformPassword()
+       {
+        let cpass=document.getElementById("cpass").value;
+        let pass=document.getElementById("pass").value;
+        if(cpass.trim().length>=3 && cpass===pass)
+        {
+            document.getElementById("cepass").innerHTML="";
+            return true;
+        }
+        document.getElementById("cepass").innerHTML="pass must be match with password,conform password not contain spaces!!!"
+        return false;
+    }
+
+    function validation()
+    {
+        let flag1=checkUserName();
+        let flag2=checkPassword();
+        let flag3=checkConformPassword();
+        return flag1 && flag2 && flag3;
+    }
+    </script>
+</head>
+<body>
+    <form action="file1" method="post" onsubmit="return validation()">
+    <table>
+        <tr>
+            <td><label for="uname">User name:</label></td>
+            <td> <input type="text" id="uname" name="user name" required></td>
+            <td id="euname" class="error"></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password:</label></td>
+            <td><input type="password" id="pass" name="password" required></td>
+            <td id="epass" class="error"></td>
+        </tr>
+        <tr>
+            <td><label for="cpass">Conform Password:</label></td>
+            <td><input type="password" id="cpass" name="cpassword" required></td>
+            <td id="cepass" class="error"></td>
+            <td id="epass" class="error"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" id="btn1" name="submit" value="submit">Login</button>
+                <button type="cancel" id="btn2" name="cancel" value="cancel">Cancel</button>
+            </td>
+        </tr>
+       
+    </table>
+    </form>
+</body>
+</html> 
